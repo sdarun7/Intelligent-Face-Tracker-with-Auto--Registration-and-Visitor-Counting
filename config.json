@@ -1,0 +1,40 @@
+{
+    "detection": {
+        "model_name": "yolov8n-face.pt",
+        "confidence_threshold": 0.5,
+        "skip_frames": 3,
+        "max_disappear_frames": 30,
+        "face_detection_size": [640, 640]
+    },
+    "recognition": {
+        "model_name": "buffalo_l",
+        "similarity_threshold": 0.6,
+        "embedding_dimension": 512,
+        "registration_threshold": 0.4
+    },
+    "tracking": {
+        "max_distance": 100,
+        "max_age": 30,
+        "min_hits": 3,
+        "iou_threshold": 0.3
+    },
+    "database": {
+        "path": "data/face_tracker.db"
+    },
+    "logging": {
+        "log_file": "logs/events.log",
+        "image_base_path": "logs",
+        "max_log_size_mb": 100,
+        "backup_count": 5
+    },
+    "video": {
+        "resize_width": 1280,
+        "resize_height": 720,
+        "fps_limit": 30
+    },
+    "system": {
+        "face_crop_padding": 20,
+        "min_face_size": 30,
+        "entry_exit_zone_ratio": 0.1
+    }
+}
